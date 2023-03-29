@@ -1,20 +1,20 @@
 // nwabisa.js
 
-private firstname = "Nwabisa"
-private surname = "Gabe"
+private  firstName = "Nwabisa"
+private  surname = "Gabe"
 public role = "CEO"
 
-private display= firstname + " " + surname + " (" + role + ")"
+private display= firstName + ' " + surname + " (" + role + ")'
 document.querySelector('#nwabisa').innerText = display
- 
+
 
 // johannes.js
 
-private firstname = "Johannes"
+private firstName = "Johannes"
 private surname = "Potgieter"
 public role = "Intern"
 
-private display= firstname + " " + surname + " (" + role + ")"
+private display= firstName + ' " + surname + " (" + role + ")'
 document.querySelector('#johannes').innerText = display
  
 
@@ -24,7 +24,7 @@ private firstname = "Alex"
 private surname = "Naidoo"
 public role = "Head of Marketing"
 
-private display= firstname + " " + surname + " (" + role + ")"
+private display= firstname + ' " + surname + " (" + role + ")'
 document.querySelector('#alex').innerText = display
  
 
