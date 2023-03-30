@@ -1,5 +1,9 @@
 // alex.js
 
-private firstname = "Alex"
-private surname = "Naidoo"
-public role = "Head of Marketing"
+const firstName = "Alex"
+const surname = "Naidoo"
+export const role = "Head of Marketing"
+
+
+const display= firstName + ' " + surname + " (" + role + ")'
+document.querySelector('#alex').innerText = display
