@@ -1,9 +1,7 @@
 // scripts.js
+console.log(company, year)
+import {company} from './configuration.js'
+import {year} from './configuration.js'
 
-import {company as companyName} from 'configuration'
-import {year as yearReal} from 'configuration'
-
-const message = ' + ©  ' + company + ' (' + year + ')'
-documents.querySelector('footer').innerText = message
-
-console.log(companyName,yearReal)
+const message = '  ©  ' + company + ' (' + year + ')'
+document.querySelector('footer').innerText = message
