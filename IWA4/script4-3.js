@@ -1,9 +1,9 @@
-const date = '2050'
-const status = 'student'
-const count = '0'
+/*const date: 2050
+const status: 'student'
+const count = 0
 
 if (date = 2050) {
-	console.log("January", 'New Year’s Day')
+	console.log("January", 'New Year’s Day'
 	console.log("March", 'Human Rights Day')
 	date = 'April'
 	console.log(date, 'Family Day')
@@ -32,4 +32,40 @@ if (date = 2050) {
 
 console.log('Your status is:', status)
 console.log('The year is:', date)
+console.log('The total holidays is:', count)*/
+
+const year = 2050
+const status = 'student'
+let count = 0
+
+if (year === 2050) {
+	console.log("January", 'New Year’s Day')
+	console.log("March", 'Human Rights Day')
+	let date = 'April'
+	console.log(date, 'Family Day')
+	console.log(date, 'Freedom Day')
+    console.log('August', 'Women’s Day')
+	console.log('September', 'Heritage Day')
+	date = 'December'
+	console.log(date, 'Day of Reconciliation')
+    console.log(date, 'Day of Goodwill')
+	count = count + 8
+
+	if (status === "student") {
+	  console.log('June', 'Youth Day')
+      count = count + 1
+ 
+  }
+
+
+	if (status === "parent") {
+	  console.log(date, 'Christmas Day')
+		let status = Parent
+  }
+
+	
+}
+
+console.log('Your status is:', status)
+console.log('The year is:', year)
 console.log('The total holidays is:', count)
