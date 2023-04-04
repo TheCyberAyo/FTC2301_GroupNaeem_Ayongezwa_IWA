@@ -34,46 +34,55 @@ const location = 'RSA'
 currency = null */
 
 const FREE_WARNING = 'Free shipping only applies to single customer orders'
-const BANNED_WARNING = 'Unfortunately we do not ship to your country of residence'
+const BANNED_WARNING = 'Unfortunately, we do not ship to your country of residence'
 const NONE_SELECTED = 0
 
-if (location = RSA) { 
-	shipping === 400 && currency === 'R' 
-}
+let shipping = null;
+let customers = 1
+let COUNTRY = 'RSA'
+let currency = 'R'
 
-if (location = NAM) {
-shipping === 600 && currency === '$'
-}else {shipping = 800 && currency === '$'  //Clients from other countries except NK
+if ( COUNTRY === RSA) {  //local clients
+	shipping = 400
+	currency = 'R' 
+} else if ( COUNTRY=== NAM) {   //namibian clients
+    shipping = 600
+	currency = '$'
+} else {
+	shipping = 800 
+	currency = '$'  //Clients from other countries except NK
   }
 
 
 
-shoes = 300 * 1
-toys = 100 * 6
-shirts = 150 * 2
-batteries = 35 * 2
-pens = 5 * 'NONE_SELECTED' 
+const shoes = 300 * 1;
+const toys = 100 * 5;
+const shirts = 150 * NONE_SELECTED;
+const batteries = 35 * 2;
+const pens = 5 * NONE_SELECTED;
 
-shipping = null
-currency = $
+let cost = shoes + toys + shirts + batteries + pens;
 
-if (shoes + batteries + pens + shirts >= 1000 ) {
-	if (location === NAM || customers === 1) {
-			if (location = RSA) {
-		    shipping = 0 || calcShipping
-		}
+if (shoes + toys + batteries + pens + shirts >= 1000) {
+	if (COUNTRY === 'NAM' && customers < 2) {  // <2 and 1 are technically the same thing, hence the decision not to change this part
+	  shipping = 0;
 	}
-}
+  }
+
 
 if (shipping === 0 && customers === 1) {
 	 console.log(FREE_WARNING) 
 	}
 
-if (location = NK ) {
-	console.log (BANNED_WARNING)
+if (COUNTRY === NK ) {
+	console.log(BANNED_WARNING)
 }
 
-let customers = 1
-let location = 'RSA'
-let currency = 'null'
+price = cost + shipping
+
+console.log('price', currency, shoes + batteries + pens + shirts + shipping + pens)
+
+
+
+
 
