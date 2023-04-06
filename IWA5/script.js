@@ -42,16 +42,19 @@ let customers = 1
 let COUNTRY = 'RSA'
 let currency = 'R'
 
-if ( COUNTRY === RSA) {  //local clients
+if ( COUNTRY === 'RSA') {  //local clients
 	shipping = 400
 	currency = 'R' 
-} else if ( COUNTRY=== NAM) {   //namibian clients
+} else if ( COUNTRY=== 'NAM') {   //namibian clients
     shipping = 600
 	currency = '$'
+
+} else if (COUNTRY === 'NK' ) {    //Banned country
+	console.log(BANNED_WARNING)
 } else {
-	shipping = 800 
-	currency = '$'  //Clients from other countries except NK
-  }
+	console = 800
+	currency = '$'
+}
 
 
 
@@ -63,26 +66,17 @@ const pens = 5 * NONE_SELECTED;
 
 let cost = shoes + toys + shirts + batteries + pens;
 
-if (shoes + toys + batteries + pens + shirts >= 1000) {
-	if (COUNTRY === 'NAM' && customers < 2) {  // <2 and 1 are technically the same thing, hence the decision not to change this part
-	  shipping = 0;
-	}
+if ( cost >= 1000 && COUNTRY === 'NAM' || COUNTRY === 'RSA')  {
+	// <2 and 1 are technically the same thing, hence the decision not to change this part
+	  
+	  if (customers === 1 ){
+		shipping = 0
+	  } else {
+		console.log(FREE_WARNING)
+	  }
   }
 
 
-if (shipping === 0 && customers === 1) {
-	 console.log(FREE_WARNING) 
-	}
+let price = cost + shipping;
 
-if (COUNTRY === NK ) {
-	console.log(BANNED_WARNING)
-}
-
-price = cost + shipping
-
-console.log('price', currency, shoes + batteries + pens + shirts + shipping + pens)
-
-
-
-
-
+console.log(price)
