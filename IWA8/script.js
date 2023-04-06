@@ -13,29 +13,20 @@ const sarahPostal = '0310'
 
 // Only change below this line
 
-const leo {
-	const nameL = leoName
-	const balance1 = leoBalance
-	const leoAccessId = '47afb389-8014-4d0b-aff3-e40203d2107f'
-	const leoAge = 24
-	const leoAddress {
-    leoNumber 
-    leoStreet 
-    leoPostal
-}
-}
+const leoAccessId = '47afb389-8014-4d0b-aff3-e40203d2107f'
+const leoAge = 24
 
-const sarah {
-	const nameS = saraName + saraSurname
-	age = 62
-	access id = '6b279ae5-5657-4240-80e9-23f6b635f7a8'
-	balance = sarahBalance
-	address {
-        sarahNumber
-		sarahStreet
-		sarahPostal
-    }
-	}
+const leoAdress = `${leoNumber}\n${leoStreet}\n${leoPostal}`
 
-console.log(leo, leo[address][postal-code])
-console.log(sarah, sarah[address][postal-code])
+const leo = `${leoName}\n${leoAge}\n${leoBalance}\n${leoAccessId}\n${leoAdress}`
+
+const SarahAcessId = '6b279ae5-5657-4240-80e9-23f6b635f7a8'
+const sarahAge = 62	
+
+const sarahAdress = `${sarahNumber}\n${sarahStreet}\n${sarahPostal}`
+        
+const sarah = `${sarahName}\n${sarahSurname}\n${sarahAge}\n${sarahBalance}\n${sarahAdress}`
+	
+
+console.log(leo)
+console.log(sarah)
