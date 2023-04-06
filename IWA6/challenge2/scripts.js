@@ -15,15 +15,12 @@ const minuteOfDay = 00;
 }
 	
 console.log(balance.toFixed(3)) 8 */
-
-if (hourOfDay === 0 && minuteOfDay === 0) {
-	const taxAsDecimal = tax;
-  const startingAfterTax = salary * (1 - taxAsDecimal);
-	const balance = startingAfterTax - transport - food - rent;
-  console.log(balance);
+if (hourOfDay === 00 && minuteOfDay == 00) {
+	const taxAsDecimal = parseInt(tax) / 100
+    const startingAfterTax = salary * (1 - taxAsDecimal)
+	const balance1 = startingAfterTax - transport - food - rent
+} else { 
+  hourOfDay == "undefined" && minuteOfDay == "undefined"
 }
 
-
-
-
-
+console.log(`R${balance1.toFixed(2)}`);

@@ -41,8 +41,8 @@ marks by backticks, to enable the strings to appear
  in single separate lines*/
 
 const owed = parseFloat(leoBalance) + parseFloat(sarahBalance); //parseFloat to enable decimals and reordered the assignments for readability
-const leo = `${leoName} ${leoSurname} Owed: R ${Math.abs(leoBalance).toFixed(2)}`; //toFixed to specify decimal place
-const sarah = `${sarahName} ${sarahSurname} Owed: R ${Math.abs(sarahBalance).toFixed(2)}`; //used Math.lab to turn negative numbers to positive
+const leo = `${leoName} ${leoSurname} Owed: ( R ${Math.abs(leoBalance).toFixed(2)} )`; //toFixed to specify decimal place
+const sarah = `${sarahName} ${sarahSurname} Owed: (R ${Math.abs(sarahBalance).toFixed(2)})`; //used Math.abs to turn negative numbers to positive
 const total = `  Total amount owed: R ${Math.abs(owed).toFixed(2)}`; 
 const result = `${leo}\n${sarah}\n${divider}\n${total}\n${divider}`;// \n specifies new line
 
