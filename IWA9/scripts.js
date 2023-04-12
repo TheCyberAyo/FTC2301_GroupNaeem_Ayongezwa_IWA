@@ -41,7 +41,7 @@ const expenses = {
     food: 51.7501,
     transport: 10.2,
     
-  }; 
+  }; // the semi colon, brcause despite the strucure, this  is declaration and assignmnet
   
   const tax = {
     734: '3%',
@@ -66,6 +66,7 @@ const expenses = {
   const taxAsDecimal = parseFloat(tax['913']) / 100; //parsefloat to turn into an interger with commas
   const taxableAmount = salary * taxAsDecimal;  
   const afterTaxAmount = salary - taxableAmount;
-  const balance = afterTaxAmount - expenses.food - expenses.transport - rent["large-apartment"]; //kebabcase, hence the square brackets
+  const type = `${size}-${lodging}`
+  const balance = afterTaxAmount - expenses.food - expenses.transport - rent[type]; //kebabcase, hence the square brackets
   
-  console.log(balance.toFixed(2));
+  console.log(balance.toFixed(2)); //toFix to specify decimals

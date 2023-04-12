@@ -4,7 +4,9 @@ const firstname = "Timothy";
 console.log("Good Morning, ${nickname} || {firstname}!")
 */
 
-const nickName= "Timmy";
-const firstName = "Timothy";
+let nickName= "Timmy";
+let firstName = "Timothy";
 
-console.log(`Good Morning, ${nickName}  ${firstName}!`)
+let name1 = nickName || firstName;
+
+console.log(`Good Morning, ${name1}!`);

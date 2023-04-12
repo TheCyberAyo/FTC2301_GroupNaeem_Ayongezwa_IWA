@@ -40,7 +40,7 @@ const sarah {
 console.log(leo, leo[address][postal-code])
 console.log(sarah, sarah[address][postal-code]) */
 
-const leo = {
+ const leo = {
 	leoName,
 	leoBalance,
     age: 24,
@@ -69,23 +69,22 @@ const sarah = {
 console.log(leo)
 console.log(sarah) 
 
-/*
 
-const leoAccessId = '47afb389-8014-4d0b-aff3-e40203d2107f'
-const leoAge = 24
 
-const leoAdress = `${leoNumber}\n${leoStreet}\n${leoPostal}`
+// const leoAccessId = '47afb389-8014-4d0b-aff3-e40203d2107f'
+// const leoAge = 24
 
-const leo = `${leoName}\n${leoAge}\n${leoBalance}\n${leoAccessId}\n${leoAdress}`
+// const leoAdress = `${leoNumber}\n${leoStreet}\n${leoPostal}`
 
-const SarahAcessId = '6b279ae5-5657-4240-80e9-23f6b635f7a8'
-const sarahAge = 62	
+// const leo = `${leoName}\n${leoAge}\n${leoBalance}\n${leoAccessId}\n${leoAdress}`
 
-const sarahAdress = `${sarahNumber}\n${sarahStreet}\n${sarahPostal}`
+// const SarahAcessId = '6b279ae5-5657-4240-80e9-23f6b635f7a8'
+// const sarahAge = 62	
+
+// const sarahAdress = `${sarahNumber}\n${sarahStreet}\n${sarahPostal}`
         
-const sarah = `${sarahName}\n${sarahSurname}\n${sarahAge}\n${sarahBalance}\n${sarahAdress}`
+// const sarah = `${sarahName}\n${sarahSurname}\n${sarahAge}\n${sarahBalance}\n${sarahAdress}`
 	
 
-console.log(leo)
-console.log(sarah) 
-*/
+// console.log(leo)
+// console.log(sarah) 
