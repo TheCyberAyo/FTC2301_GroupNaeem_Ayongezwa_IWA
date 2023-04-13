@@ -121,8 +121,6 @@ copied = {
 correctDate = copied.date
 correctDate = new Date(`25 December ${currentYear}`)
 
-correctDate.setHours(0)
-correctDate.setMinutes(0)
 
 isEarlier = correctDate < holidays[6].date // holidays[6].date contains the initial wrong date, hence console.log is "true"
 console.log('New date is earlier:', isEarlier)
@@ -143,55 +141,63 @@ if (holidays[christmas].id !== copied.id) {
   }
 
 
+const firstHolidayTimestamp = Math.min(
+    new Date(holidays[0].date).getTime(),
+    new Date(holidays[1].date).getTime(),
+    new Date(holidays[2].date).getTime(),
+    new Date(holidays[3].date).getTime(),
+    new Date(holidays[4].date).getTime(),
+    new Date(holidays[5].date).getTime(),
+    new Date(holidays[6].date).getTime(),
+    new Date(holidays[7].date).getTime(),
+    new Date(holidays[8].date).getTime(),
+    
+)
 
+const lastHolidayTimestamp = Math.max(
+    new Date(holidays[0].date).getTime(),
+    new Date(holidays[1].date).getTime(),
+    new Date(holidays[2].date).getTime(),
+    new Date(holidays[3].date).getTime(),
+    new Date(holidays[4].date).getTime(),
+    new Date(holidays[5].date).getTime(),
+    new Date(holidays[6].date).getTime(),
+    new Date(holidays[7].date).getTime(),
+    new Date(holidays[8].date).getTime(),
 
-// const holidayTimestamps = Object.values(holidays).map(holiday => holiday);
+)
 
-const holiday = {
-    [0]: parseInt(new Date(`16 December ${currentYear}`).toLocaleDateString('en-GB')),
-    [1]: parseInt(new Date(`1 April ${currentYear}`).toLocaleDateString('en-GB')),
-    [2]: parseInt(new Date(`26 December ${currentYear}`).toLocaleDateString('en-GB')),
-    [3]: parseInt(new Date(`1 January ${currentYear}`).toLocaleDateString('en-GB')),
-    [4]: parseInt(new Date(`9 August ${currentYear}`).toLocaleDateString('en-GB')),
-    [5]: parseInt(new Date(`24 September ${currentYear}`).toLocaleDateString('en-GB')),
-    [6]: parseInt(correctDate.toLocaleDateString('en-GB')),
-    [7]: parseInt(new Date(`16 June ${currentYear}`).toLocaleDateString('en-GB')),
-    [8]: parseInt(new Date(`21 March ${currentYear}`).toLocaleDateString('en-GB')),
-}
+// const lastHolidayTimestamp = Math.max(
+//     holidays[0].date,
+//     holidays[1].date.getTime,
+//     holidays[2].date.getTime,
+//     holidays[3].date.getTime,
+//     holidays[4].date.getTime,
+//     holidays[5].date.getTime,
+//     holidays[6].date.getTime,
+//     holidays[7].date.getTime,
+//     holidays[8].date.getTime,
+// )
 
-const firstHolidayTimestamp = Math.min(parseInt(Object.values(holiday)));
-const lastHolidayTimestamp = Math.max(parseInt(Object.values(holiday)));
+// const holiday = {
+//     [0]: parseInt(new Date(`16 December ${currentYear}`).toLocaleDateString('en-GB')),
+//     [1]: parseInt(new Date(`1 April ${currentYear}`).toLocaleDateString('en-GB')),
+//     [2]: parseInt(new Date(`26 December ${currentYear}`).toLocaleDateString('en-GB')),
+//     [3]: parseInt(new Date(`1 January ${currentYear}`).toLocaleDateString('en-GB')),
+//     [4]: parseInt(new Date(`9 August ${currentYear}`).toLocaleDateString('en-GB')),
+//     [5]: parseInt(new Date(`24 September ${currentYear}`).toLocaleDateString('en-GB')),
+//     [6]: parseInt(correctDate.toLocaleDateString('en-GB')),
+//     [7]: parseInt(new Date(`16 June ${currentYear}`).toLocaleDateString('en-GB')),
+//     [8]: parseInt(new Date(`21 March ${currentYear}`).toLocaleDateString('en-GB')),
+// }
 
-const firstHoliday = firstHolidayTimestamp;
-const lastHoliday = lastHolidayTimestamp;
+const firstDay = new Date(firstHolidayTimestamp).getDate().toString();
+const firstMonth = new Date(firstHolidayTimestamp).getMonth() + 1;
+const lastDay = new Date (lastHolidayTimestamp).getDate().toString();
+const lastMonth = new Date(lastHolidayTimestamp).getMonth() + 1;
 
+console.log(`${firstDay.padStart(2, '0')}/${firstMonth}/${currentYear}`);
+console.log(`${lastDay}/${lastMonth}/${currentYear}`);
 
-
-console.log(firstHoliday)
-console.log(lastHoliday)
-
-const randomHoliday = holiday[Math.random]
-console.log(randomHoliday)
-
-
-
-
-
-
-// const firstHoliday = Math.min(...holiday);
-// const lastHoliday = Math.max(...holiday);
-
-
-// // const firstDay = firstHolidayDate.getDate();
-// // const firstMonth = parseInt(firstHolidayDate.getMonth() + 1);
-// // const lastDay = lastHolidayDate.getDate();
-// // const lastMonth = parseInt(lastHolidayDate.getMonth() + 1);
-
-// console.log(firstHoliday);
-// console.log(lastHoliday);
-
-// console.log(`${firstDay}/${firstMonth}/${currentYear}`);
-// console.log(`${lastDay}/${lastMonth}/${currentYear}`); 
-
-// const randomHoliday = Math.random(holidays)
-// console.log(randomHoliday)
+const randomHoliday = Math.floor[Math.random(holidays)*9];
+console.log(Math.random(Holiday.toLocaleDateString()))

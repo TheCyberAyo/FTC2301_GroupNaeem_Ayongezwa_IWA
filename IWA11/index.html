@@ -1,133 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
 
-     
-    
-    <!DOCTYPE html>
-    <html lang="en">
-    
-        <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>The JS Bakery</title>
-            <script src="./script.js"></script>
-        </head>
-        
-        <body>
-            <h1>The JS Bakery</h1>
-            
-            <h2>Summary</h2>
-    
-            <h2>Orders</h2>
-    
-            <section>
-              <h3>Order 2</h2>
-              <h4>Inventory</h4>
-              
-              <dl
-                data-key="order1"
-                data-biscuits="10"
-                data-donuts="13"
-                data-pancakes="0"
-                data-delivered="false"
-              >
-                <div class="biscuits">
-                  <dt>Biscuits<dt>
-                  <dd class="count"></dd>
-                </div>
-            
-                <div class="donuts">
-                  <dt>Donuts<dt>
-                  <dd class="count"></dd>
-                </div>
-            
-                <div class="pancakes">
-                  <dt>Pancakes<dt>
-                  <dd class="count"></dd>
-                </div>
-              </dl>
-            
-              <h4>Status</h4>
-              <span class="status"></span>
-            </section>
-            
-            <section>
-              <h3>Order 2</h3>
-              <h4>Inventory</h4>
-              
-              <dl
-                data-key="order2"
-                data-biscuits="5"
-                data-donuts="0"
-                data-pancakes="2"
-                data-delivered="false"
-              >
-                <div class="biscuits">
-                  <dt>Biscuits<dt>
-                  <dd class="count"></dd>
-                </div>
-            
-                <div class="donuts">
-                  <dt>Donuts<dt>
-                  <dd class="count"></dd>
-                </div>
-            
-                <div class="pancakes">
-                  <dt>Pancakes<dt>
-                  <dd class="count"></dd>
-                </div>
-              </dl>
-            
-              <h4>Status</h4>
-              <span class="status"></span>
-            </section>
-            
-            
-            <section>
-              <h2>Order 3</h2>
-              <h3>Inventory</h3>
-              
-              <dl
-                data-key="order3"
-                data-biscuits="12"
-                data-donuts="11"
-                data-pancakes="15"
-                data-delivered="true"
-              >
-                <div class="biscuits">
-                  <dt>Biscuits<dt>
-                  <dd class="count"></dd>
-                </div>
-            
-                <div class="donuts">
-                  <dt>Donuts<dt>
-                  <dd class="count"></dd>
-                </div>
-            
-                <div class="pancakes">
-                  <dt>Pancakes<dt>
-                  <dd class="count"></dd>
-                </div>
-              </dl>
-            
-              <h3>Status</h3>
-              <span class="status"></span>
-            </section>
-        </body>
-    </html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The JS Bakery</title>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <h1>The JS Bakery</h1>
+
+    <h2>Orders</h2>
+
+    <section>
+        <h3>Order 1</h3>
+
+        <dl 
+            data-key="order1" 
+            data-biscuits="10" 
+            data-donuts="13" 
+            data-pancakes="0" 
+            data-delivered="false"
+        >
+            <div class="biscuits">
+                <dt>Biscuits</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="donuts">
+                <dt>Donuts</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="pancakes">
+                <dt>Pancakes</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="status">
+                <dt>Status</dt>
+                <dd>Loading...</dd>
+            </div>
+        </dl>
+
+    </section>
+
+    <section>
+        <h3>Order 2</h3>
+
+        <dl 
+            data-key="order2" 
+            data-biscuits="5" 
+            data-donuts="0" 
+            data-pancakes="2" 
+            data-delivered="false"
+        >
+            <div class="biscuits">
+                <dt>Biscuits</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="donuts">
+                <dt>Donuts</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="pancakes">
+                <dt>Pancakes</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="status">
+                <dt>Status</dt>
+                <dd>Loading...</dd>
+            </div>
+        </dl>
+    </section>
+
+
+    <section>
+        <h3>Order 3</h3>
+
+        <dl 
+            data-key="order3" 
+            data-biscuits="12" 
+            data-donuts="11" 
+            data-pancakes="15" 
+            data-delivered="true"
+        >
+            <div class="biscuits">
+                <dt>Biscuits</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="donuts">
+                <dt>Donuts</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="pancakes">
+                <dt>Pancakes</dt>
+                <dd class="count">Loading...</dd>
+            </div>
+
+            <div class="status">
+                <dt>Status</dt>
+                <dd>Loading...</dd>
+            </div>
+        </dl>
+    </section>
+</body>
+
+</html>
 
 <!--
-     The following is code for a single web page that shows all the orders for a cake shop. 
-It lists all the orders, and the items in the order, by means of unordered lists (<ul>). 
-However, below that it should also display the total amount of each different 
-item (Biscuits, Donuts and Pancakes) that are still outstanding vs. what has already been delivered.
+   The following is code for a single web page that shows all the orders for a cake shop.
+    It lists all the orders, and the items in the order, by means of discription lists (<dl>).
 
 Note that the values for each order are supplied directly via data attributes when the HTML is created.
-At the moment, none of the Loading... prompts are replaced with the actual JavaScript values. 
+ At the moment, none of the Loading... prompts are replaced with the actual JavaScript values.
 Your goal is to ensure that each instance of Loading... is swapped out with the value from the data attributes instead.
-    
-Use your knowledge of data attributes and interact with the DOM to achieve the goal. 
-Use the HTML file as a reference, for creating your querySelector() calls. 
-However, you are only allowed to change the code in the scripts.js file (not the HTML file), since the HTML is 
-created by the server that reads from a database. This also means that you will need to rely on ID and class attributes 
-to select specific HTML nodes. -->
+
+Use your knowledge of data attributes and interact with the DOM to achieve the goal.
+ Use the HTML file as a reference, for creating your querySelector() calls.
+However, you are only allowed to change the code in the scripts.js file (not the HTML file), 
+since the HTML is created by the server that reads from a database. 
+This also means that you will need to rely on ID and class attributes to select specific HTML nodes. 
+-->
     
