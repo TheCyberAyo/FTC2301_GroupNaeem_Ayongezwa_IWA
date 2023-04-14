@@ -164,21 +164,7 @@ const lastHolidayTimestamp = Math.max(
     new Date(holidays[6].date).getTime(),
     new Date(holidays[7].date).getTime(),
     new Date(holidays[8].date).getTime(),
-
 )
-
-// const lastHolidayTimestamp = Math.max(
-//     holidays[0].date,
-//     holidays[1].date.getTime,
-//     holidays[2].date.getTime,
-//     holidays[3].date.getTime,
-//     holidays[4].date.getTime,
-//     holidays[5].date.getTime,
-//     holidays[6].date.getTime,
-//     holidays[7].date.getTime,
-//     holidays[8].date.getTime,
-// )
-
 // const holiday = {
 //     [0]: parseInt(new Date(`16 December ${currentYear}`).toLocaleDateString('en-GB')),
 //     [1]: parseInt(new Date(`1 April ${currentYear}`).toLocaleDateString('en-GB')),
@@ -199,5 +185,5 @@ const lastMonth = new Date(lastHolidayTimestamp).getMonth() + 1;
 console.log(`${firstDay.padStart(2, '0')}/${firstMonth}/${currentYear}`);
 console.log(`${lastDay}/${lastMonth}/${currentYear}`);
 
-const randomHoliday = Math.floor[Math.random(holidays)*9];
-console.log(Math.random(Holiday.toLocaleDateString()))
+const randomHoliday = Math.floor(Math.random(holidays) * 9);
+console.log(Math.random(holidays.toLocaleDateString()))
