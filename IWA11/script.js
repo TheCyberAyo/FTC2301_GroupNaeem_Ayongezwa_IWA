@@ -31,18 +31,27 @@
 // 3-pancakes = 3-root.pancakes,
 // 3-status = 3-root.status ? Delivered : Pending
 
-const order1 = document.querySelector('[data-key="order1"]'); //fixed 1-order to order1, to correspond with HTML, add .querySelector find target
-const order1Biscuits = order1.querySelector('.biscuits .count'); //to specify value of count of specified item using Data Key
-const order1Donuts = order1.querySelector('.donuts .count');
-const order1Pancakes = order1.querySelector('.pancakes .count');
-const order1Status = order1.querySelector('.status dd');
+const root1 = document.querySelector('[data-key="order1"]'); //1-root to root1(syntax correction), found target key
+const order1Biscuits = root1.querySelector('.biscuits .count'); //to specify value of count of specified item using Data Key
+const order1Donuts = root1.querySelector('.donuts .count'); //querySelected class donuts and targeted class count
+const order1Pancakes = root1.querySelector('.pancakes .count'); //use of classes to target
+const order1Status = root1.querySelector('.status dd'); //use of class and element to target
 
-const order2 = document.querySelector('[data-key="order2"]');
+order1Biscuits.textContent = root1.dataset.biscuits; //textContent to alter text in target
+order1Donuts.textContent = root1.dataset.donuts;
+order1Pancakes.textContent = root1.dataset.pancakes;
+order1Status.textContent = root1.dataset.delivered === "true" ? "Delivered" : "Pending";
+
+const order2 = document.querySelector('[data-key="order2"]');  //changed root to order and rearranged
 const order2Biscuits = order2.querySelector('.biscuits .count');
 const order2Donuts = order2.querySelector('.donuts .count');
 const order2Pancakes = order2.querySelector('.pancakes .count');
 const order2Status = order2.querySelector('.status dd');
 
+order2Biscuits.textContent = order2.dataset.biscuits;
+order2Donuts.textContent = order2.dataset.donuts;
+order2Pancakes.textContent = order2.dataset.pancakes;
+order2Status.textContent = order2.dataset.delivered === "true" ? "Delivered" : "Pending";
 
 const order3 = document.querySelector('[data-key="order3"]');
 const order3Biscuits = order3.querySelector('.biscuits .count');
@@ -50,16 +59,6 @@ const order3Donuts = order3.querySelector('.donuts .count');
 const order3Pancakes = order3.querySelector('.pancakes .count');
 const order3Status = order3.querySelector('.status dd');
 
-
-order1Biscuits.textContent = order1.dataset.biscuits; //textContent
-order1Donuts.textContent = order1.dataset.donuts;
-order1Pancakes.textContent = order1.dataset.pancakes;
-order1Status.textContent = order1.dataset.delivered === "true" ? "Delivered" : "Pending";
-
-order2Biscuits.textContent = order2.dataset.biscuits;
-order2Donuts.textContent = order2.dataset.donuts;
-order2Pancakes.textContent = order2.dataset.pancakes;
-order2Status.textContent = order2.dataset.delivered === "true" ? "Delivered" : "Pending";
 
 order3Biscuits.textContent = order3.dataset.biscuits;
 order3Donuts.textContent = order3.dataset.donuts;
