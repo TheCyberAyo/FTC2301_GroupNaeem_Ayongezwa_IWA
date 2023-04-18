@@ -6,9 +6,9 @@ let calculated = '1'
 
 
 const  logCalc = () => { //removed equal sign from before the variable to after it
-    const isString = typeof calculated === 'string' // change numerical-string to string
-    const calculatedAsNumber = isString ? calculated : parseInt(calculated) //change parseNumber to parseInt
-    calculated === calculatedAsNumber + 1 
+    const isString = typeof calculated === 'numerical-string'// change numerical-string to string
+    const calculatedAsNumber = isString ? parseInt(calculated) : calculated//change parseNumber to parseInt
+    calculated === calculatedAsNumber + 1 //
 }
 
 const calcUser = () => {  //removed equal sign from before the variable to after it
@@ -24,6 +24,11 @@ const checkUser = () => {  //removed equal sign from before the variable to afte
 	}
 }
 
+function test () {
+    checkUser()
+}
+
+test()
 // Only allowed to change code above
 
 checkUser()
