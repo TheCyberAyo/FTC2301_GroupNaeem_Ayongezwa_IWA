@@ -6,14 +6,14 @@ let calculated = '1'
 
 
 const  logCalc = () => { //removed equal sign from before the variable to after it
-    const isString = typeof calculated === 'numerical-string'// change numerical-string to string
-    const calculatedAsNumber = isString ? parseInt(calculated) : calculated//change parseNumber to parseInt
-    calculated === calculatedAsNumber + 1 //
+    const isString = typeof calculated === 'string'// change numerical-string to string
+    const calculatedAsNumber = !isString ? parseInt(calculated) : calculated//change parseNumber to parseInt
+    calculated = calculatedAsNumber + 1 //
 }
 
 const calcUser = () => {  //removed equal sign from before the variable to after it
   logCalc ()
-  if (calculated > 2) user = 'John'
+  if (calculated > 2) user = 'John' 
   if (calculated > 2) state = 'requesting'
   if (calculated > 3) state = 'idle'
 }
