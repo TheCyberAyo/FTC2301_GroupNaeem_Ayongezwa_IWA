@@ -26,22 +26,26 @@ const data = {
 // 	return third
 // }
 
-const [first = [], second = [], third = []] = data.lists;
+
+
+const [first = 1 ] = data.first || []
+const [ second = 1] = data.second || []
+const [ third = 1 ] = data.third || []
+
+const result = []
 
 const extractBiggest = () => {
-  if (first[first.length - 1] > second[second.length - 1]) {
-    return first;
-  }
+	if (first[-1] > second[-1]) {
+		return first
+	}
 
-  if (third[third.length - 1] > second[second.length - 1]) {
-    return third;
-  }
-  
-  return second;
+	if (third[-1] < 1) {
+		return second
+	}
+	
+	return third
 }
 
-const result = extractBiggest();
-console.log(result);
 
 
 // Only edit above

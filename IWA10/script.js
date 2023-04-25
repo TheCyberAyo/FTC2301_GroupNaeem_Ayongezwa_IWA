@@ -165,25 +165,18 @@ const lastHolidayTimestamp = Math.max(
     new Date(holidays[7].date).getTime(),
     new Date(holidays[8].date).getTime(),
 )
-// const holiday = {
-//     [0]: parseInt(new Date(`16 December ${currentYear}`).toLocaleDateString('en-GB')),
-//     [1]: parseInt(new Date(`1 April ${currentYear}`).toLocaleDateString('en-GB')),
-//     [2]: parseInt(new Date(`26 December ${currentYear}`).toLocaleDateString('en-GB')),
-//     [3]: parseInt(new Date(`1 January ${currentYear}`).toLocaleDateString('en-GB')),
-//     [4]: parseInt(new Date(`9 August ${currentYear}`).toLocaleDateString('en-GB')),
-//     [5]: parseInt(new Date(`24 September ${currentYear}`).toLocaleDateString('en-GB')),
-//     [6]: parseInt(correctDate.toLocaleDateString('en-GB')),
-//     [7]: parseInt(new Date(`16 June ${currentYear}`).toLocaleDateString('en-GB')),
-//     [8]: parseInt(new Date(`21 March ${currentYear}`).toLocaleDateString('en-GB')),
-// }
 
-const firstDay = new Date(firstHolidayTimestamp).getDate().toString();
+
+
+
+
+const firstDay = new Date(firstHolidayTimestamp).getDate().toString(); //
 const firstMonth = new Date(firstHolidayTimestamp).getMonth() + 1;
 const lastDay = new Date (lastHolidayTimestamp).getDate().toString();
 const lastMonth = new Date(lastHolidayTimestamp).getMonth() + 1;
 
-console.log(`${firstDay.padStart(2, '0')}/${firstMonth}/${currentYear}`);
+console.log(`${firstDay.padStart(2, '0')}/${firstMonth}/${currentYear}`); //padStart makes something to appear with a minimum of 2 characters
 console.log(`${lastDay}/${lastMonth}/${currentYear}`);
 
-const randomHoliday = Math.floor(Math.random(holidays) * 9);
-console.log(Math.random(holidays.toLocaleDateString()))
+const randomHoliday = holidays[Math.floor(Math.random() * 9)] //Math.floor rounds off, Math.random for random date
+console.log(randomHoliday.date.toLocaleDateString()) //toLocaleDateString makes all numbers to appear in 2 digits

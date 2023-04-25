@@ -25,32 +25,38 @@ const STATUS_MAP = {
     }
 }
 
-const book1Status = document.querySelector('#book1 .status');
-const book1Reserve = document.querySelector('#book1 .reserve');
-const book1Checkout = document.querySelector('#book1 .checkout');
-const book1Checkin = document.querySelector('#book1 .checkin');
 
-const book2Status = document.querySelector('#book2 .status');
-const book2Reserve = document.querySelector('#book2 .reserve');
-const book2Checkout = document.querySelector('#book2 .checkout');
-const book2Checkin = document.querySelector('#book2 .checkin');
+const book1 = document.getElementById('book1');
+const status1 = book1.querySelector('.status');
+const reserve1 = book1.querySelector('.reserve');
+const checkout1 = book1.querySelector('.checkout');
+const checkin1 = book1.querySelector('.checkin');
 
-const book3Status = document.querySelector('#book3 .status');
-const book3Reserve = document.querySelector('#book3 .reserve');
-const book3Checkout = document.querySelector('#book3 .checkout');
-const book3Checkin = document.querySelector('#book3 .checkin');
+
+const book2 = document.getElementById('book2');
+const status2 = book2.querySelector('.status');
+const reserve2 = book2.querySelector('.reserve');
+const checkout2 = book2.querySelector('.checkout');
+const checkin2 = book2.querySelector('.checkin');
+
+
+const book3 = document.getElementById('book3');
+const status3 = book3.querySelector('.status');
+const reserve3 = book3.querySelector('.reserve');
+const checkout3 = book3.querySelector('.checkout');
+const checkin3 = book3.querySelector('.checkin');
+
+
 
 function updateBookStatus(statusElement, reserveButton, checkoutButton, checkinButton, status) {
-  const statusProperties = STATUS_MAP[status];
-  statusElement.style.color = statusProperties.color;
-  reserveButton.disabled = !statusProperties.canReserve;
-  checkoutButton.disabled = !statusProperties.canCheckout;
-  checkinButton.disabled = !statusProperties.canCheckIn;
+  const statusProperties = STATUS_MAP[status];  
+  statusElement.style.color = statusProperties.color; //statusElement: This DOM element represents the status of a book, such as "Available" or "Checked out", influence change of color.
+  reserveButton.disabled = !statusProperties.canReserve; // This is a button element that represents the reserve button for the book
+  checkoutButton.disabled = !statusProperties.canCheckout; // This is a button element that represents the check out button for the book
+  checkinButton.disabled = !statusProperties.canCheckIn; // This is a button element that represents the check in button for the book
 }
 
-updateBookStatus(book1Status, book1Reserve, book1Checkout, book1Checkin, 'overdue');
-updateBookStatus(book2Status, book2Reserve, book2Checkout, book2Checkin, 'reserved');
-updateBookStatus(book3Status, book3Reserve, book3Checkout, book3Checkin, 'shelf');
-
-
+updateBookStatus(status1, reserve1, checkout1, checkin1, 'overdue');
+updateBookStatus(status2, reserve2, checkout2, checkin2, 'reserved');
+updateBookStatus(status3, reserve3, checkout3, checkin3, 'shelf');
 
