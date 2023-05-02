@@ -10,20 +10,27 @@
 // 	return this
 // }
 
-function add(a, b) {  //removed = to sign, and inserted to the functions, removed the the function arrow, added c 
-   return a + b;   //added 'return'  and the semicolon
-}
+// function add(a, b, c) {  //removed = to sign, and inserted to the functions, removed the the function arrow, added c 
+//    return a + b ;   //added 'return'  and the semicolon
+// }
 
-function multiply(a, b) {  //added c, 
-  return  a * b; // changed minus sign to multiplication sign and added semicolon
-}
+// function multiply(a, b, c) {  //added c, 
+//   return  a * b * c ; // changed minus sign to multiplication sign and added semicolon
+// }
 
-function internal() {
+function add(a, b) {
+	return a + b;
+  }
+  
+function multiply(a, b) {
+	return a * b;
+  }
+  
+  function internal() {
 	const added = this.add(this.internal.a, this.internal.b);
 	const multiplied = this.multiply(this.internal.a, this.internal.b);
 	return multiplied;
-    };
-
+  }
 // Not allowed to change below this
 
 const example1 = {
