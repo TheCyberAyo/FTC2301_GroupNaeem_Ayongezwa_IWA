@@ -66,11 +66,11 @@ const MONTHS = [
   // Only edit below this comment  
 
   const createHtml = (athlete) => {
-    // Destructure the properties of the athlete object from the data response
-    const { firstName, surname, id, races } = data.response.data[athlete];
+    
+    const { firstName, surname, id, races } = data.response.data[athlete]; // Destructure the properties of the athlete object
 
-    // Reverse the order of the races array
-    races.reverse();
+    
+    races.reverse(); // Reverse the order of the races array
 
     // Create a Date object from the date property of the first (latest) race
     const latestDate = new Date(races[0].date);
@@ -78,13 +78,13 @@ const MONTHS = [
     // Get the time property of the first (latest) race
     const latestTime = races[0].time;
     
-    // Create a document fragment to hold the HTML elements
-    const fragment = document.createDocumentFragment();
-    // Create an h2 element and set its text content to the athlete's id
-    const title = document.createElement("h2");
+    
+    const fragment = document.createDocumentFragment(); // Create a document fragment to hold the HTML elements
+    
+    const title = document.createElement("h2");// Create an h2 element to contain athlete's id
     title.textContent = data.response.data[athlete].id;
-    // Append the title element to the fragment
-    fragment.appendChild(title);
+    
+    fragment.appendChild(title); // Append the title element to the fragment (h2)
     // Create a dl element to hold the athlete's information
     const list = document.createElement("dl");
     // Get the day, month, and year of the latest race date
@@ -109,10 +109,10 @@ const MONTHS = [
       <dt>Total Time (Latest)</dt>
       <dd>${hours.toString().padStart(2, 0)}:${minutes}</dd>
     `;
-    // Append the list element to the fragment
-    fragment.appendChild(list);
-    // Return the completed HTML fragment
-    return fragment;
+    
+    fragment.appendChild(list); // Append the list element to the fragment
+    
+    return fragment;// Return the completed HTML fragment
   };
   // Destructure the id properties of the two athletes from the data response
   const { NM372: { id: NM372 }, SV782: {id: SV782} } = data.response.data;

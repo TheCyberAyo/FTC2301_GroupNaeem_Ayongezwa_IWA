@@ -21,13 +21,13 @@ const createArray = (length) => {
     };
     return result;
 };
-const createData = () => { // Declare a function that creates an array of nested objects containing week number and an array of days for each week.
-    const current = new Date; // Create a new date object with the current date.
+const createData = () => { //  array of nested objects containing week number and an array of days for each week.
+    const current = new Date; //  current date.
     current.setDate(1); // Set the date to the first of the current month.
     let startDay = current.getDay(); // Get the day of the week (0-6) for the first day of the month.
     let daysInMonth = getDaysInMonth(current); // Get the number of days in the current month.
-    const weeks = createArray(5); // Create an array with 6 null values to represent each week of the month.
-    const days = createArray(7); // Create an array with 7 null values to represent each day of the week.
+    const weeks = createArray(5); //  each week of the month.
+    const days = createArray(7); //  represent each day of the week.
     let value = null; // Set value to null.
     let result = []; // Create an empty array to store the result.
     let day = 0 - startDay; // Calculate the starting day of the week (e.g., Sunday or Monday) by subtracting the day of the week (startDay) from zero.
@@ -105,11 +105,11 @@ const createHtml = (data) => {
         }
         // Add a cell for the current week number to the inner HTML string
         inner = addCell(inner, 'class="table__cell table__cell_sidebar"', `Week ${data[x].week}`);
-        // Add a row to the result HTML string, containing the cells for the current week
-        result += '<tr>' + inner + '</tr>';
+        
+        result += '<tr>' + inner + '</tr>'; // Add a row to the result HTML string, containing the cells for the current week
     }
-    // Return the final HTML string for the table
-    return result;
+    
+    return result; // Return the final HTML string for the table
 };
 // Only edit above
 const current = new Date();
